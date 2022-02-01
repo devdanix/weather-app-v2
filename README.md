@@ -6,6 +6,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `npm i`
+
+Run `npm i` to install all app dependencies and npm packages.
+
+Create .env file and add you OpenWeather API KEY as REACT_APP_WEATHER_API_KEY=YOUR_API_KEY
+
 ### `npm start`
 
 Runs the app in the development mode.\
