@@ -20,7 +20,7 @@ export default function ForecastList({
   }
 
   return (
-      <ul className='gr-col-2'>
+      <ul className='gr-col-2 forecast-list'>
       {
         forcastToShow.map(item => {
           return (

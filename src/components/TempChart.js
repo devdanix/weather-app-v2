@@ -30,7 +30,6 @@ export function TempChart(
   }
 
   const options = {
-    responsive: true,
     maintainAspectRatio: false,
     layout: {
       padding: {
@@ -99,6 +98,6 @@ export function TempChart(
     ],
   };
 
-  return  <Line options={options} data={data} height="162" />;
+  return  <Line options={options} data={data}  />;
 
 }

@@ -18,11 +18,12 @@ ul {
   list-style: none;
   display: flex;
   margin-top: 5%;
+  justify-content: space-between;
 }
 
 .app {
   padding: 2%;
-  height: 600px;
+  min-height: 600px;
   margin-left: auto;
   margin-right: auto;
   width: 62%;
@@ -64,14 +65,12 @@ ul {
 }
 
 .today-wrapper {
-  /* border: 1px solid #000; */
   max-width: 100%;
   grid-row-start: 1;
   grid-row-end: 3;
 }
 
 .day-wrapper {
-  /* border: 1px solid #000; */
   width: 145px;
   margin-right: 10px;
 }
@@ -80,7 +79,6 @@ ul {
   font-size: 60px;
   position: relative;
   font-weight: bold;
-  /* margin-left: -10px; */
 }
 
 .celsius {
@@ -175,4 +173,41 @@ ul {
 .error {
   color: rgb(241, 86, 86);
   font-size: 14px;
+}
+
+.chart-wrapper {
+  height: 200px;
+  width: 40vw;
+  position: relative;
+}
+
+@media screen and (max-width: 1700px) {
+  .app {
+    width: 85%;
+    height: 100%;
+  }
+
+  .forecast-wrapper {
+    grid-template-columns: 100%;
+  }
+
+  .today-wrapper {
+    grid-row: 1;
+  }
+
+  .chart-wrapper,
+  .forecast-list {
+    grid-column: 1;
+  }
+
+  .chart-wrapper {
+    width: 80vw;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .forecast-list {
+    flex-direction: column;
+    align-items: center;
+  }
 }

@@ -86,7 +86,7 @@ export default function ForcastRender({
   return (
     <div className='forecast-wrapper'>
       {today()}
-      <div className='gr-col-2' style={{height: 200}}>
+      <div className='gr-col-2 chart-wrapper'>
         <TempChart tempData={getDayTempData(selected)}/>
       </div>
       <ForecastList data={data} setSelected={setSelected}/>
