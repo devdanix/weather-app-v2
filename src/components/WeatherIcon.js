@@ -17,8 +17,6 @@ export default function WeatherIcon({
 
   if (id === '') return false
 
-  console.log(id)
-
   if (id > 299 && id < 233) {
     return <WiThunderstorm size={size}/>
   } else if (id > 299 && id < 322) {

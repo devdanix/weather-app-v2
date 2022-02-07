@@ -52,7 +52,7 @@ export default function Forcast({
           <p className='temp day-button-temp'>{temp}<span className='celsius'>°C</span></p>
         </div>
         <p className='w-100 ta-cr weather mb'>{main}</p>
-        <div className='dsfx w-100 jc-sa mb'>
+        <div className='dsfx w-100 jc-sa mb humidity'>
           <p className='dsfx dsfx-col ai-cr'>Humidity<span>{humidity}%</span></p>
         </div>
       </button>

@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { BiSearch } from 'react-icons/bi'
 
 export default function Form({
   setResult = f => f
@@ -24,14 +25,18 @@ export default function Form({
     .catch(error => {console.error('Error:', error)})
   }
 
+  useEffect(() => {
+    getData('London')
+  }, []);
+
+
   return (
     <div >
-      <form className='form dsfx ai-cr jc-sb'>
-        <label>Your city: </label>
+      <form className='form'>
         <input
           type="text"
           className="form-input-field"
-          placeholder=""
+          placeholder="Enter city name..."
           onChange={(e) => setValue(e.target.value)}
           value={value}
           required={true}
@@ -40,7 +45,7 @@ export default function Form({
           e.preventDefault()
           if(!value) return false
           getData(value)
-        }}/>
+        }}><BiSearch/></button>
       </form>
     </div>
   )

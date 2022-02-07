@@ -5,13 +5,14 @@
 }
 
 body {
-  background-color: aliceblue;
+  background-color: #e0ecfe;
 }
 
 input {
-  border: 0.5px solid #cccc;
+  border: 0.5px solid #e0e0e0cc;
   padding: 3%;
-  border-radius: 5px;
+  border-radius: 10px;
+  width: 95%;
 }
 
 ul {
@@ -26,18 +27,11 @@ ul {
   min-height: 600px;
   margin-left: auto;
   margin-right: auto;
-  width: 62%;
+  width: 64%;
   margin-top: 6%;
-  background-color: #fff;
+  background-color: #f2f7ff;
   border-radius: 25px;
   box-shadow: 3px 3px #adc0e4;
-}
-
-.search-button {
-  font-size: 22px;
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
 }
 
 .dsfx {
@@ -62,6 +56,13 @@ ul {
 
 .ai-cr {
   align-items: center;
+}
+
+.item-wrapper {
+  border: 0.5px solid #e0e0e0cc;
+  border-radius: 20px;
+  background-color: #fff;
+  padding: 2%;
 }
 
 .today-wrapper {
@@ -111,6 +112,18 @@ ul {
 .form {
   width: 350px;
   height: 50px;
+  position: relative;
+}
+
+.search-button {
+  font-size: 22px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 9px;
+  right: 6%;
+  color: #a5a5a5;
 }
 
 .forecast-wrapper {
@@ -195,7 +208,12 @@ ul {
     grid-row: 1;
   }
 
+  .item-wrapper {
+    margin-top: 5%;
+  }
+
   .chart-wrapper,
+  .item-wrapper,
   .forecast-list {
     grid-column: 1;
   }
@@ -209,5 +227,28 @@ ul {
   .forecast-list {
     flex-direction: column;
     align-items: center;
+  }
+
+  .form {
+    margin-top: 5%;
+  }
+
+  .chart-wrapper {
+    width: 75vw;
+  }
+
+  .day-wrapper {
+    width: 100%;
+  }
+
+  .day-button {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  p.weather,
+  .humidity {
+    display: none;
   }
 }

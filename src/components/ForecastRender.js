@@ -4,6 +4,7 @@ import { TempChart } from './TempChart';
 import WeatherIcon from './WeatherIcon';
 
 
+
 export default function ForcastRender({
   data = []
 }) {
@@ -63,10 +64,10 @@ export default function ForcastRender({
         }
       )
 
-      console.log(today)
+
 
       return (
-        <div className='today-wrapper gr-col-1'>
+        <div className='today-wrapper gr-col-1 item-wrapper'>
           <p className='mt w-100 ta-cr weather'>{city} Weather</p>
           <p className='w-100 ta-cr mt weather-date'>{todayFormatted}</p>
           <div className='dsfx jc-cr ai-cr mt-x3 mb-x2'>
@@ -86,10 +87,12 @@ export default function ForcastRender({
   return (
     <div className='forecast-wrapper'>
       {today()}
-      <div className='gr-col-2 chart-wrapper'>
-        <TempChart tempData={getDayTempData(selected)}/>
+      <div className='gr-col-2 item-wrapper'>
+        <div className='chart-wrapper'>
+          <TempChart tempData={getDayTempData(selected)}/>
+        </div>
+        <ForecastList data={data} setSelected={setSelected}/>
       </div>
-      <ForecastList data={data} setSelected={setSelected}/>
-    </div>
+  </div>
   )
 }
